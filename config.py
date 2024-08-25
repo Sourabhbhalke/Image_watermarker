@@ -7,13 +7,13 @@ class Config(object):
     
     basedir = os.path.abspath(os.path.dirname(__file__))
 
-    SECRET_KEY = 'SourabhB'
+    SECRET_KEY = environ.get('SECRET_KEY', 'default_secret_key')
 
     DB_NAME = "production-db"
     DB_USERNAME = "root"
-    DB_PASSWORD = "SourabhB"
+    DB_PASSWORD = environ.get('DB_PASSWORD', 'default_password')
 
-    UPLOADS = "/home/username/app/app/static/uploads"
+    UPLOADS = os.path.join(basedir, 'static', 'uploads')
 
     SESSION_COOKIE_SECURE = True
     DEFAULT_THEME = None
@@ -26,25 +26,24 @@ class ProductionConfig(Config):
 class DevelopmentConfig(Config):
     DEBUG = True
 
-    DB_NAME = "development-db"  # Assuming this should be for development
+    DB_NAME = "development-db"
     DB_USERNAME = "root"
-    DB_PASSWORD = "SourabhB"
+    DB_PASSWORD = environ.get('DB_PASSWORD', 'default_password')
 
-    UPLOADS = "/home/username/app/app/static/uploads"
+    UPLOADS = os.path.join(basedir, 'static', 'uploads')
     SESSION_COOKIE_SECURE = False
 
 
 class TestingConfig(Config):
     DEBUG = True
 
-    DB_NAME = "testing-db"  # Assuming this should be for testing
+    DB_NAME = "testing-db"
     DB_USERNAME = "root"
-    DB_PASSWORD = "SourabhB"
+    DB_PASSWORD = environ.get('DB_PASSWORD', 'default_password')
 
-    UPLOADS = "/home/username/app/app/static/uploads"
+    UPLOADS = os.path.join(basedir, 'static', 'uploads')
     SESSION_COOKIE_SECURE = False
 
 
 class DebugConfig(Config):
     DEBUG = False
-
