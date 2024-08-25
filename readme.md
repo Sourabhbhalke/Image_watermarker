@@ -1,14 +1,44 @@
-Step to run application:
-Step 1:	Create the copy of the project.
-Step 2: Open command prompt and change your current path 
-to folder where you can find 'app.py' file.
-Step 3: Create environment by command given below-
-conda create -name <environment name>
-Step 4: Activate environment by command as follows-
-conda activate <environment name>
-Step 5: Use command below to install required dependencies-
+Image Watermarking Flask App
+Steps to Run the Application
+Create a Copy of the Project:
+Clone the repository to your local machine.
+Open Command Prompt and Change Directory:
+Navigate to the folder where the app.py file is located.
+
+cd path/to/your/repo
+
+Create Environment:
+Create a new Conda environment. Replace <environment_name> with your preferred environment name.
+
+conda create -n <environment_name> python=3.8
+
+Activate Environment:
+Activate the Conda environment.
+
+conda activate <environment_name>
+
+Install Required Dependencies:
+Install all required Python packages from the requirements.txt file.
+
 python -m pip install -r requirements.txt
-Step 6: Run application by command;
+
+Run the Application:
+Start the Flask application.
+
 python app.py
-You will get url copy it and paste in browser.
-Step 7: You have sample_data folder where you can get images to test.
+
+You will receive a URL in the command prompt. Copy and paste this URL into your browser to access the application.
+Test with Sample Data:
+Use the sample_data folder to find images for testing the application.
+Latest Changes
+Refactor Image Processing to Prevent Multiple Logo Stacking
+Unique Filename Generation: Implemented unique filename generation using uuid to prevent overwriting images and stacking multiple logos on top of each other.
+Separate Image Saving: Ensured that each processed image is saved with a unique filename, preserving the original files.
+Updated Logic for Watermarks: Updated views.py to handle both logo and text watermarks separately without accumulating multiple iterations.
+Changes in views.py
+Added logic to create unique filenames for each processed image using uuid.
+Modified image saving to use unique filenames, avoiding overwriting of existing files.
+Improved handling of text and logo watermarks to ensure clarity and prevent multiple logos on the same image.
+Additional Changes
+Updated requirements.txt to include all necessary dependencies for running the application.
+Related
