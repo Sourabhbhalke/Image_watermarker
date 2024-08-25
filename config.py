@@ -30,7 +30,8 @@ class DevelopmentConfig(Config):
     DB_USERNAME = "root"
     DB_PASSWORD = environ.get('DB_PASSWORD', 'default_password')
 
-    UPLOADS = os.path.join(basedir, 'static', 'uploads')
+    # Ensure that basedir is available here
+    UPLOADS = os.path.join(Config.basedir, 'static', 'uploads')
     SESSION_COOKIE_SECURE = False
 
 
@@ -41,7 +42,8 @@ class TestingConfig(Config):
     DB_USERNAME = "root"
     DB_PASSWORD = environ.get('DB_PASSWORD', 'default_password')
 
-    UPLOADS = os.path.join(basedir, 'static', 'uploads')
+    # Ensure that basedir is available here
+    UPLOADS = os.path.join(Config.basedir, 'static', 'uploads')
     SESSION_COOKIE_SECURE = False
 
 
