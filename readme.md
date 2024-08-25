@@ -28,17 +28,25 @@ Start the Flask application.
 python app.py
 
 You will receive a URL in the command prompt. Copy and paste this URL into your browser to access the application.
+
+
 Test with Sample Data:
+
+
 Use the sample_data folder to find images for testing the application.
-Latest Changes
-Refactor Image Processing to Prevent Multiple Logo Stacking
-Unique Filename Generation: Implemented unique filename generation using uuid to prevent overwriting images and stacking multiple logos on top of each other.
-Separate Image Saving: Ensured that each processed image is saved with a unique filename, preserving the original files.
-Updated Logic for Watermarks: Updated views.py to handle both logo and text watermarks separately without accumulating multiple iterations.
-Changes in views.py
-Added logic to create unique filenames for each processed image using uuid.
-Modified image saving to use unique filenames, avoiding overwriting of existing files.
-Improved handling of text and logo watermarks to ensure clarity and prevent multiple logos on the same image.
-Additional Changes
-Updated requirements.txt to include all necessary dependencies for running the application.
-Related
+
+
+
+
+###Latest Changes
+#Refactor Image Processing to Prevent Multiple Logo Stacking
+#Unique Filename Generation: Implemented unique filename generation using uuid to prevent overwriting images and stacking #multiple logos on top of each other.
+#Separate Image Saving: Ensured that each processed image is saved with a unique filename, preserving the original files.
+#Updated Logic for Watermarks: Updated views.py to handle both logo and text watermarks separately without accumulating multiple iterations.
+###Changes in views.py
+#Added logic to create unique filenames for each processed image using uuid.
+#Modified image saving to use unique filenames, avoiding overwriting of existing files.
+#Improved handling of text and logo watermarks to ensure clarity and prevent multiple logos on the same image.
+###Additional Changes
+#Updated requirements.txt to include all necessary dependencies for running the application.
+
