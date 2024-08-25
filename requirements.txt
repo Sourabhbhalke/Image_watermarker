@@ -1,0 +1,10 @@
+Deprecated==1.2.14
+img2pdf==0.5.1
+pikepdf==8.15.1
+reqs==0.0.2
+Flask
+numpy
+opencv-python-headless
+Pillow
+gunicorn
+
