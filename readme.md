@@ -1,39 +1,39 @@
-Image Watermarking Flask App
-Steps to Run the Application
-Create a Copy of the Project:
-Clone the repository to your local machine.
-Open Command Prompt and Change Directory:
-Navigate to the folder where the app.py file is located.
+## Image Watermarking Flask App
+### Steps to Run the Application
+### Create a Copy of the Project:
+### Clone the repository to your local machine.
+### Open Command Prompt and Change Directory:
+### Navigate to the folder where the app.py file is located.
 
-cd path/to/your/repo
+#### cd path/to/your/repo
 
-Create Environment:
-Create a new Conda environment. Replace <environment_name> with your preferred environment name.
+### Create Environment:
+### Create a new Conda environment. Replace <environment_name> with your preferred environment name.
 
-conda create -n <environment_name> python=3.8
+#### conda create -n <environment_name> python=3.8
 
-Activate Environment:
-Activate the Conda environment.
+### Activate Environment:
+### Activate the Conda environment.
 
-conda activate <environment_name>
+#### conda activate <environment_name>
 
-Install Required Dependencies:
-Install all required Python packages from the requirements.txt file.
+### Install Required Dependencies:
+### Install all required Python packages from the requirements.txt file.
 
-python -m pip install -r requirements.txt
+#### python -m pip install -r requirements.txt
 
-Run the Application:
-Start the Flask application.
+### Run the Application:
+### Start the Flask application.
 
-python app.py
+#### python app.py
 
-You will receive a URL in the command prompt. Copy and paste this URL into your browser to access the application.
-
-
-Test with Sample Data:
+### You will receive a URL in the command prompt. Copy and paste this URL into your browser to access the application.
 
 
-Use the sample_data folder to find images for testing the application.
+### Test with Sample Data:
+
+
+### Use the sample_data folder to find images for testing the application.
 
 
 
